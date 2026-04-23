@@ -8,7 +8,7 @@
     "packages/*"
   ],
   "scripts": {
-    "check": "node --check packages/react/src/index.js && node --check packages/react/src/progress/form-draft.js && node --check packages/react/src/progress/wizard-draft.js && node --check packages/vue/src/index.js && node --check packages/vue/src/progress/form-draft.js && node --check packages/vue/src/progress/wizard-draft.js",
+    "check": "node --check packages/react/src/index.js && node --check packages/react/src/progress/form-draft.js && node --check packages/react/src/progress/wizard-draft.js && node --check packages/react/src/url/query-state.js && node --check packages/vue/src/index.js && node --check packages/vue/src/progress/form-draft.js && node --check packages/vue/src/progress/wizard-draft.js && node --check packages/vue/src/url/query-state.js",
     "test": "vitest run"
   },
   "devDependencies": {

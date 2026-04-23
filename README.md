@@ -16,11 +16,19 @@ Progress durability protects private work the user has already done but has not 
 - `useFormDraft` preserves one form's private field values.
 - `useWizardDraft` preserves multi-step progress, including the current step and per-step data.
 
+## URL
+
+URL durability keeps shareable view state in the address bar.
+
+- `useQueryState` syncs one query parameter for tabs, filters, sorting, pagination, or modal state.
+
 ## Vue
 
 ```vue
 <script setup>
-import { useFormDraft, useWizardDraft } from '@durable-ui/vue'
+import { useFormDraft, useQueryState, useWizardDraft } from '@durable-ui/vue'
+
+const activeTab = useQueryState('tab', 'details')
 
 const draft = useFormDraft('invoice:draft', () => form.data(), {
   clearWhen: () => form.recentlySuccessful,
@@ -37,7 +45,11 @@ const wizard = useWizardDraft('invoice:wizard', {
 ## React
 
 ```jsx
-import { useFormDraft, useWizardDraft } from '@durable-ui/react'
+import {
+  useFormDraft,
+  useQueryState,
+  useWizardDraft
+} from '@durable-ui/react'
 
 const wizardSteps = {
   profile: { name: '', company: '' },
@@ -45,6 +57,7 @@ const wizardSteps = {
 }
 
 function OnboardingForm({ form }) {
+  const [activeTab, setActiveTab] = useQueryState('tab', 'profile')
   const draft = useFormDraft('onboarding:profile', form.data, {
     clearWhen: form.recentlySuccessful,
     onRestore: form.setData
@@ -54,6 +67,7 @@ function OnboardingForm({ form }) {
 
   // Render your form with draft.restore(), draft.discard(),
   // wizard.updateStep(), wizard.goNext(), and wizard.clear().
+  // Render your tabs with activeTab and setActiveTab.
 }
 ```
 
@@ -64,6 +78,10 @@ Source folders use kebab-case names such as `form-draft/` and `wizard-draft/` un
 Public exports stay ecosystem-native:
 
 ```js
-import { useFormDraft, useWizardDraft } from '@durable-ui/vue'
-import { useFormDraft, useWizardDraft } from '@durable-ui/react'
+import { useFormDraft, useQueryState, useWizardDraft } from '@durable-ui/vue'
+import {
+  useFormDraft,
+  useQueryState,
+  useWizardDraft
+} from '@durable-ui/react'
 ```

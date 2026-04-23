@@ -1,7 +1,7 @@
 {
   "name": "@durable-ui/vue",
   "version": "0.0.0",
-  "description": "Vue composables for durable form drafts and wizards.",
+  "description": "Vue composables for durable progress drafts and URL state.",
   "type": "module",
   "sideEffects": false,
   "exports": {
@@ -10,7 +10,8 @@
   "files": [
     "src/index.js",
     "src/progress/form-draft.js",
-    "src/progress/wizard-draft.js"
+    "src/progress/wizard-draft.js",
+    "src/url/query-state.js"
   ],
   "peerDependencies": {
     "vue": "^3.4.0 || ^3.5.0"
