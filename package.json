@@ -1,0 +1,22 @@
+{
+  "name": "durable-ui",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Durable UI utilities for resilient client state.",
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "check": "node --check packages/react/src/index.js && node --check packages/react/src/progress/form-draft.js && node --check packages/react/src/progress/wizard-draft.js && node --check packages/vue/src/index.js && node --check packages/vue/src/progress/form-draft.js && node --check packages/vue/src/progress/wizard-draft.js",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.3.0",
+    "happy-dom": "^20.0.5",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "vitest": "^4.0.0",
+    "vue": "^3.5.22"
+  }
+}
