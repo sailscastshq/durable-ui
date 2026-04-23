@@ -1,7 +1,7 @@
 {
   "name": "@durable-ui/react",
   "version": "0.0.0",
-  "description": "React hooks for durable form drafts and wizards.",
+  "description": "React hooks for durable progress drafts and URL state.",
   "type": "module",
   "sideEffects": false,
   "exports": {
@@ -10,7 +10,8 @@
   "files": [
     "src/index.js",
     "src/progress/form-draft.js",
-    "src/progress/wizard-draft.js"
+    "src/progress/wizard-draft.js",
+    "src/url/query-state.js"
   ],
   "peerDependencies": {
     "react": "^18.3.0 || ^19.0.0"
