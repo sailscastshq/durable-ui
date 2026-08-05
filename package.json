@@ -1,7 +1,7 @@
 {
   "name": "durable-ui-monorepo",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Durable UI utilities for resilient client state.",
   "type": "module",
   "workspaces": [
