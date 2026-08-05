@@ -2,6 +2,17 @@
 
 Date: 2026-04-22
 
+## Scanner V1
+
+The first CLI release is a zero-dependency static diagnostic exposed as `npx durable-ui scan`.
+
+- It scans JavaScript, TypeScript, JSX, TSX, Vue, Svelte, Astro, HTML, and EJS source files.
+- It prefers concrete browser-contract evidence over a broad lint-rule count.
+- Findings have file and line locations, a user consequence, and a disruptive browser test to perform.
+- Ambiguous state placement is labeled `REVIEW`; the tool does not claim every modal or local state value must persist.
+- Human output links to the Durable UI course. JSON output remains clean for future editor and CI integrations.
+- Version 0.0.1 does not fail CI for findings. Enforcement needs project-level baselines and explicit team policy first.
+
 ## What We Extracted
 
 The first package pass ships only `useFormDraft` and `useWizardDraft` for React and Vue.
