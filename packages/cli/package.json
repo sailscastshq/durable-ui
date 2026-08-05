@@ -4,7 +4,7 @@
   "description": "Scan a web app for fragile UI state and browser contract risks.",
   "type": "module",
   "bin": {
-    "durable-ui": "./bin/durable-ui.js"
+    "durable-ui": "bin/durable-ui.js"
   },
   "exports": {
     "./scanner": "./src/scanner.js"
