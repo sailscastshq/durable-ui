@@ -1,0 +1,44 @@
+{
+  "name": "durable-ui",
+  "version": "0.0.1",
+  "description": "Scan a web app for fragile UI state and browser contract risks.",
+  "type": "module",
+  "bin": {
+    "durable-ui": "./bin/durable-ui.js"
+  },
+  "exports": {
+    "./scanner": "./src/scanner.js"
+  },
+  "files": [
+    "bin/durable-ui.js",
+    "src/args.js",
+    "src/cli.js",
+    "src/format.js",
+    "src/rules.js",
+    "src/scanner.js",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "durable-ui",
+    "frontend",
+    "scanner",
+    "ux",
+    "react",
+    "vue",
+    "svelte"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sailscastshq/durable-ui.git",
+    "directory": "packages/cli"
+  },
+  "homepage": "https://sailscasts.com/courses/durable-ui",
+  "bugs": {
+    "url": "https://github.com/sailscastshq/durable-ui/issues"
+  }
+}

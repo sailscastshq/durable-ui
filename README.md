@@ -1,13 +1,28 @@
 # Durable UI
 
-Durable UI is a small set of framework-native utilities for form state that should survive real app life: refreshes, browser restarts, accidental navigation, and long multi-step flows.
+Durable UI finds and fixes interface state that should survive real app life: refreshes, browser restarts, accidental navigation, sign-in interruptions, and long multi-step flows.
 
-The project is intentionally logic-only. It is separate from Klean UI, but Klean can use these utilities in generated durable patterns.
+The runtime packages are intentionally logic-only. The scanner is a separate zero-dependency CLI, and Klean UI can use the framework utilities in generated durable patterns.
+
+Documentation lives at [docs.sailscasts.com/durable-ui](https://docs.sailscasts.com/durable-ui/).
 
 ## Packages
 
+- `durable-ui`: a source scanner for fragile state and browser contract risks.
 - `@durable-ui/vue`: Vue composables.
 - `@durable-ui/react`: React hooks.
+
+## Scan An App
+
+Run the scanner from the root of a web project:
+
+```sh
+npx durable-ui scan
+```
+
+It reports high-confidence risks and state-placement decisions to review, with source locations and suggested browser tests. Use `--json` for machine-readable output or `--no-course` to hide the course invitation.
+
+The scanner is a diagnostic, not a durability score. Static analysis cannot know every product contract, so reproduce each finding with refresh, Back, Forward, sign-in, and recovery behavior before changing the implementation.
 
 ## Progress
 

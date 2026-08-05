@@ -1,5 +1,5 @@
 {
-  "name": "durable-ui",
+  "name": "durable-ui-monorepo",
   "private": true,
   "version": "0.0.0",
   "description": "Durable UI utilities for resilient client state.",
@@ -8,7 +8,8 @@
     "packages/*"
   ],
   "scripts": {
-    "check": "node --check packages/react/src/index.js && node --check packages/react/src/progress/form-draft.js && node --check packages/react/src/progress/wizard-draft.js && node --check packages/react/src/url/query-state.js && node --check packages/vue/src/index.js && node --check packages/vue/src/progress/form-draft.js && node --check packages/vue/src/progress/wizard-draft.js && node --check packages/vue/src/url/query-state.js",
+    "check": "node --check packages/cli/bin/durable-ui.js && node --check packages/cli/src/args.js && node --check packages/cli/src/cli.js && node --check packages/cli/src/format.js && node --check packages/cli/src/rules.js && node --check packages/cli/src/scanner.js && node --check packages/react/src/index.js && node --check packages/react/src/progress/form-draft.js && node --check packages/react/src/progress/wizard-draft.js && node --check packages/react/src/url/query-state.js && node --check packages/vue/src/index.js && node --check packages/vue/src/progress/form-draft.js && node --check packages/vue/src/progress/wizard-draft.js && node --check packages/vue/src/url/query-state.js",
+    "scan": "node packages/cli/bin/durable-ui.js scan",
     "test": "vitest run"
   },
   "devDependencies": {
